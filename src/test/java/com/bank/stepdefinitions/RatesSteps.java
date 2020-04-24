@@ -19,34 +19,34 @@ public class RatesSteps {
     private Response response;
 
     @Given("I use rate header")
-    public void i_use_rate_header() {
+    public void useRateHeader() {
         request = given().headers(PropertyReader.getFullHeader()).log().headers();
     }
 
     @When("I create get request to get the latest rates for all symbols")
-    public void i_create_get_request_to_get_the_latest_rates_for_all_symbols() {
+    public void createGetRequestToGetTheLatestRatesForAllSymbols() {
         String apiPath = PropertyReader.getLatesrUrl();
         response = request.when().get(apiPath);
     }
 
     @Then("I get status code {int} from database")
-    public void i_get_status_code_from_database(Integer int1) {
+    public void getStatuscodeFromDatabase(Integer int1) {
         response.then().statusCode(int1).log().all();
     }
 
     @Then("The rates response body should contain")
-    public void the_rates_response_body_should_contain(List<String> responseMap) {
+    public void ratesResponseBodyShouldContain(List<String> responseMap) {
      ResponseHelper.responseValidations(response, responseMap);
     }
 
     @When("I create get request to get the latest rates using an incomplete url")
-    public void i_create_get_request_to_get_the_latest_rates_using_an_invalid_url() {
+    public void createGetRequestToGetTheLatestatesUsingInvalidUrl() {
         String apiPath = PropertyReader.getbaseURL();
         response = request.when().get(apiPath);
     }
 
     @When("I create get request to get the latest rates for all symbols for {string}  date")
-    public void i_create_get_request_to_get_the_latest_rates_for_all_symbols_for_date(String string) {
+    public void createGetRequestToGetLatestRatesAllSymbolsForDate(String string) {
         String apiPath = PropertyReader.getbaseURL() + string;
         response = request.when().get(apiPath);
     }
