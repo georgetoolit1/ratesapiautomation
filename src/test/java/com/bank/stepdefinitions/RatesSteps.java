@@ -17,7 +17,7 @@ public class RatesSteps {
 
 
     @Given("^I use customer header$")
-    public void i_use_customer_header() throws Throwable {
+    public void useCustomHeader() throws Throwable {
         request = given().headers(PropertyReader.getFullHeader()).log().headers();
     }
 
