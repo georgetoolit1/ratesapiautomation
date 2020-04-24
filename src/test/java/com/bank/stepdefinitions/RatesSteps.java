@@ -18,7 +18,6 @@ public class RatesSteps {
     private RequestSpecification request;
     private Response response;
 
-
     @Given("I use rate header")
     public void i_use_rate_header() {
         request = given().headers(PropertyReader.getFullHeader()).log().headers();
@@ -26,7 +25,7 @@ public class RatesSteps {
 
     @When("I create get request to get the latest rates for all symbols")
     public void i_create_get_request_to_get_the_latest_rates_for_all_symbols() {
-        String apiPath = PropertyReader.getUserUrl();
+        String apiPath = PropertyReader.getLatesrUrl();
         response = request.when().get(apiPath);
     }
 
@@ -42,7 +41,18 @@ public class RatesSteps {
 
     @When("I create get request to get the latest rates using an incomplete url")
     public void i_create_get_request_to_get_the_latest_rates_using_an_invalid_url() {
-        String apiPath = PropertyReader.getInvalidURL();
+        String apiPath = PropertyReader.getbaseURL();
         response = request.when().get(apiPath);
+    }
+
+    @When("I create get request to get the latest rates for all symbols for {string}  date")
+    public void i_create_get_request_to_get_the_latest_rates_for_all_symbols_for_date(String string) {
+        String apiPath = PropertyReader.getbaseURL() + string;
+        response = request.when().get(apiPath);
+    }
+
+    @Then("The response body should contain current date")
+    public void responseBodyShouldContainCurrentDate(String date) {
+        ResponseHelper.pathValidations(response, date);
     }
 }

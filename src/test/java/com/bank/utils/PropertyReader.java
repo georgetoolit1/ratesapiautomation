@@ -40,10 +40,10 @@ public class PropertyReader {
         return headersTest;
     }
 
-    public static String getUserUrl(){
+    public static String getLatesrUrl(){
         return properties.getProperty("latestEndPoint");
     }
 
-    public static String getInvalidURL() { return  properties.getProperty("baseUrl");}
+    public static String getbaseURL() { return  properties.getProperty("baseUrl");}
 
 }
