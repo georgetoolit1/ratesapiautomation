@@ -41,7 +41,9 @@ public class PropertyReader {
     }
 
     public static String getUserUrl(){
-        return properties.getProperty("userEndPoint");
+        return properties.getProperty("latestEndPoint");
     }
+
+    public static String getInvalidURL() { return  properties.getProperty("baseUrl");}
 
 }

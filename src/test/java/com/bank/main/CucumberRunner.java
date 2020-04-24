@@ -8,7 +8,7 @@ import org.testng.annotations.AfterSuite;
 import static com.bank.utils.ReportHelper.generateTestReport;
 
 @CucumberOptions( strict = true, monochrome = true, features = "src/test/resources/features",
-        glue = "com.bank.stepdefinitions",
+        glue = "com/bank/stepdefinitions",
         plugin = {"pretty", "json:target/cucumber.json"}, tags = {"@smoke"}
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {

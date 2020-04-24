@@ -1,4 +1,4 @@
-Feature: Latest date Rates
+Feature: Latest rates
 
   @smoke
   Scenario: Get the latest foreign exchange rates
@@ -16,7 +16,7 @@ Feature: Latest date Rates
         |rates|
 
   @smoke
-  Scenario: Get the latest foreign exchange rate using an invalid url
+  Scenario: Get the latest foreign exchange rate when  an incomplete url is supplied
     Given I use rate header
-    When  I create get request to get the latest rates using an invalid url
+    When  I create get request to get the latest rates using an incomplete url
     Then  I get status code 400 from database
