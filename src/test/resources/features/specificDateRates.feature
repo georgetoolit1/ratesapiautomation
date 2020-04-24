@@ -1,6 +1,6 @@
 @smoke
 Feature: Get rates for a specified date
-  Scenario Outline: Get the latest foreign exchange rates for past dates
+  Scenario Outline: Get the  foreign exchange rates for a past and verify response code
     Given I use rate header
     When  I create get request to get the latest rates for all symbols for "<date>"  date
     Then  I get status code 200 from database

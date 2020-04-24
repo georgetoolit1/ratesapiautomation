@@ -1,5 +1,5 @@
 @smoke
-Feature: Latest rates
+Feature: Get the latest rates
 
   Scenario: Get the latest foreign exchange rates
     Given I use rate header

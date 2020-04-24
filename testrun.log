@@ -71,3 +71,19 @@
 2020-04-24 10:12:00 INFO  CucumberRunner:19 - Generating Cucumber test report
 2020-04-24 11:02:54 INFO  CucumberRunner:19 - Generating Cucumber test report
 2020-04-24 11:03:52 INFO  CucumberRunner:19 - Generating Cucumber test report
+2020-04-24 11:16:54 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:55 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:55 INFO  ResponseHelper:18 - Validating response json response
+2020-04-24 11:16:56 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:56 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:56 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:57 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:57 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:57 INFO  ResponseHelper:18 - Validating response json response
+2020-04-24 11:16:57 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:57 INFO  ResponseHelper:18 - Validating response json response
+2020-04-24 11:16:57 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:58 INFO  ResponseHelper:18 - Validating response json response
+2020-04-24 11:16:58 INFO  PropertyReader:35 - Getting headers
+2020-04-24 11:16:58 INFO  ResponseHelper:28 - Validating an item in a json response
+2020-04-24 11:16:58 INFO  CucumberRunner:19 - Generating Cucumber test report
